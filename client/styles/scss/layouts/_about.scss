@@ -1,0 +1,40 @@
+.about{
+	p{
+			text-indent: 0px;
+		}
+	background:#fff;
+	padding: 15px 30px;
+	.team{
+		padding-top: 15px;
+		span{
+			padding-left: 15px;
+		}
+	}
+	.bs-about{
+		padding: 0 20px;
+		.thb-about{
+			border-radius: 10px;
+			img{
+				border-radius: 10px;
+			}
+			.caption{
+				height: 200px;
+			}
+		}
+	}
+	.team-text{
+		p{
+			text-indent: 20px;
+		}
+		h1, h2, .center{
+			text-align: center;
+		}
+		.bloq{
+			text-align: right;
+		}
+		.center{
+			font-size: 18px;
+			text-transform: uppercase;
+		}
+}
+}

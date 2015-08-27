@@ -1,0 +1,81 @@
+#ajaxSearch_form{
+	padding:47px 0px 0px 70px;
+ 	margin:0px;
+	@include breakpoint(extra-small){
+	    margin-left: 0;
+	    margin-right: 0;
+    	border:none;
+    	padding:0;
+	}
+}
+	#ajaxSearch_submit{
+		height: 34px;
+		border: 1px solid transparent;
+		border-radius: 4px;
+		color: #333333;
+		background-color: #ffffff;
+		border-color: #cccccc;
+	}
+		#ajaxSearch_input{
+			height: 34px;
+			border: 1px solid #cccccc;
+			border-radius: 4px;
+		}
+			.ajaxSearch_result {
+				border:1px dotted #eee;
+				padding:5px 10px;
+				margin:0px;
+			}
+				.ajaxSearch_highlight {
+					background-color:#b2c629;
+					color:#FFFFFF
+				}
+					.ajaxSearch_grpResultName{
+						font-weight:bold;
+					}
+						.ajaxSearch_resultLink{
+							 font-size:1.1em;
+							 font-weight:bold;
+							 text-decoration:underline;
+						}
+							.ajaxSearch_paging {
+								display:block;
+								padding:10px 0;
+							}
+								.ajaxSearch_paging .ajaxSearch_currentPage{
+									color:#fff;
+									background-color:#B2C629;
+									border:1px solid #6f7b1a;
+									padding: 1px 3px;
+									font-weight:bold;
+									margin:2px;
+								}
+									#ajaxSearch_intro{
+										display:none;
+									}
+.page{
+	padding: 10px 10px;
+	text-align: center;
+	display: block;
+		.ditto_page, .ditto_previous_link, .ditto_next_link, .ditto_currentpage, span{
+		    position: relative;
+		    float: left;
+		    padding: 6px 12px;
+		    line-height: 1.42857143;
+		    text-decoration: none;
+		    color: #337ab7;
+		    background-color: #ffffff;
+		    border: 1px solid #dddddd;
+		    margin-left: -1px;
+		}
+		.page .ditto_currentpage{
+			display: none;
+		}
+	}
+	.search-result{
+		background:#fff;
+		padding: 10px 10px;
+		.pagination{
+			margin:0;
+		}
+	}

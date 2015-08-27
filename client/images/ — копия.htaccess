@@ -1,0 +1,58 @@
+# For full documentation and other suggested options, please see
+# http://svn.modxcms.com/docs/display/MODx096/Friendly+URL+Solutions
+# including for unexpected logouts in multi-server/cloud environments
+# and especially for the first three commented out rules
+
+#php_flag register_globals Off
+AddDefaultCharset utf-8
+#php_value date.timezone Europe/Moscow
+
+#Options +FollowSymlinks
+RewriteEngine On
+RewriteBase /
+
+# Fix Apache internal dummy connections from breaking [(site_url)] cache
+RewriteCond %{HTTP_USER_AGENT} ^.*internal\ dummy\ connection.*$ [NC]
+RewriteRule .* - [F,L]
+
+# Rewrite domain.com -> www.domain.com -- used with SEO Strict URLs plugin
+#RewriteCond %{HTTP_HOST} .
+#RewriteCond %{HTTP_HOST} !^www\.example\.com [NC]
+#RewriteRule (.*) http://www.example.com/$1 [R=301,L]
+
+# without www
+#RewriteCond %{HTTP_HOST} .
+#RewriteCond %{HTTP_HOST} !^example\.com [NC]
+#RewriteRule (.*) http://example.com/$1 [R=301,L]
+
+# without www  all domian
+#RewriteCond %{HTTP_HOST} .
+#RewriteCond %{HTTP_HOST} ^www.(.*)$ [NC]
+#RewriteRule ^(.*)$ http://%1/$1 [R=301,L]
+
+# Exclude /assets and /manager directories and images from rewrite rules
+RewriteRule ^(manager|assets|js|css|images|img)/.*$ - [L]
+RewriteRule \.(jpg|jpeg|png|gif|ico)$ - [L]
+
+# For Friendly URLs
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php?q=$1 [L,QSA]
+
+<IfModule mod_deflate.c>
+  # Включаем deflate для не стандартных заголовков:
+  # http://developer.yahoo.com/blogs/ydn/posts/2010/12/pushing-beyond-gzipping/
+  <IfModule mod_setenvif.c>
+    <IfModule mod_headers.c>
+      SetEnvIfNoCase ^(Accept-EncodXng|X-cept-Encoding|X{15}|~{15}|-{15})$ ^((gzip|deflate)\s*,?\s*)+|[X~-]{4,13}$ HAVE_Accept-Encoding
+      RequestHeader append Accept-Encoding "gzip,deflate" env=HAVE_Accept-Encoding
+    </IfModule>
+  </IfModule>
+  <IfModule mod_filter.c>
+    AddOutputFilterByType DEFLATE text/html text/plain text/css \
+    								application/json text/javascript application/javascript application/x-javascript text/x-js text/ecmascript application/ecmascript text/vbscript text/fluffscript \
+    								text/xml application/xml text/x-component \
+    								application/xhtml+xml application/rss+xml application/atom+xml \
+    								image/x-icon image/svg+xml application/vnd.ms-fontobject application/x-font-ttf font/opentype
+  </IfModule>
+</IfModule>

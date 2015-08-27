@@ -1,0 +1,53 @@
+footer{
+		background: url("../../../client/images/footer/footer.png");
+	    background-repeat: no-repeat;
+	    background-position: bottom center;
+        height: 320px;
+        position: absolute;
+  		bottom: 0;
+  		width: 100%;
+  		.navbar-bottom{
+			background-color: transparent;
+	    	border-color: transparent;
+	    	@include breakpoint(extra-small){
+	    		text-align: center;
+				padding-top: 15px;
+			}
+				.navbar-nav-bottom-soc{
+					float:right;
+					padding-bottom: 15px;
+					@include breakpoint(middle){
+						padding-top: 15px;
+						float: right ;
+					}
+				}
+		}
+		.footer-nav{
+			padding-top: 10px;
+			@include breakpoint(extra-small){
+				padding-top: 0px;
+			}
+		}
+			.fot-left{
+				float:left;
+				@include breakpoint(extra-small){
+					float: none;
+				}
+			}
+				.fot-right{
+					p{
+						font-weight: lighter;
+					}
+					float:right;
+					@include breakpoint(extra-small){
+						float: none;
+					}
+					.nav-bottom-soc{
+						float: right;
+						padding: 0 5px 10px 0 ;
+						@include breakpoint(extra-small){
+							float: none;
+						}
+					}
+				}
+}

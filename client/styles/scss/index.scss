@@ -1,0 +1,20 @@
+@import "compass/css3";
+@import "compass/utilities/general/clearfix";
+@import "compass/css3/transition";
+// @import "lib/bootstrap/bootstrap";
+
+@import "mixins/breakpoints";
+
+@import "base";
+
+@import "widgets/header";
+@import "widgets/footer";
+@import "widgets/thumbnail";
+@import "widgets/widget";
+
+@import "layouts/mainpage";
+@import "layouts/needhelp";
+@import "layouts/you-help";
+@import "layouts/projects";
+@import "layouts/about";
+@import "layouts/contacts";

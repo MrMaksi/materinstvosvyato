@@ -1,0 +1,75 @@
+	.prog-main{
+	    height: 25px !important;
+        margin-bottom: 10px !important;
+        font-weight: bold;
+        font-size: 12px;
+	}
+		.prog-text-main{
+			font-weight: lighter;
+			font-size: 14px !important;
+			text-align: right !important;
+		}
+			.prog-main-value{
+				line-height: 27px ;
+			}
+			.left-slide{
+				position: relative;
+   				height: 400px;
+			}
+				.bottom-info{
+					position: absolute;
+	   				bottom: 0;
+	    			width: 100%;
+				}
+.thumbnail{
+	background-color: rgba(0, 0, 0, 0.1) !important;
+	h3{
+		font-family: 'Didact Gothic', sans-serif;
+	}
+}
+	.thumbnail img{
+		height: 100% !important; 
+		width: 100% !important;
+		display: block;
+	}
+		.thumb {
+				padding:5px;
+		}
+			.thumb img {
+				filter: none; /* IE6-9 */
+				-webkit-filter: grayscale(0);
+				border-radius:5px;
+				background-color: #fff;
+				border: 1px solid #ddd;
+				padding:5px;
+		    }
+			    .thumb img:hover {
+					filter: gray; /* IE6-9 */
+					-webkit-filter: grayscale(1);
+			    }
+					.prog-text{
+						font-size: 11px;
+						@include clearfix;
+						text-align: right;
+					}
+					.progress-bar{
+					    color:#000 !important;
+					    line-height: 28px !important;
+					    background-color: #0084F5 !important;
+					}
+.tab-pane{
+	padding: 15px 0 0 10px ;
+}
+	.bs-example-tabs-top{
+		padding-top: 20px;
+	}
+		.main{
+			border-radius: 5px;
+			width: 100%;
+		}
+			.top-text{
+				padding: 0 15px;
+			}
+			.in{
+			    padding: 10px 10px;
+			}

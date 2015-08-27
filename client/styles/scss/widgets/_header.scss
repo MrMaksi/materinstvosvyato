@@ -1,0 +1,74 @@
+header{
+	background: transparent;
+	@include clearfix;
+		.navbar-default{
+			background:rgba(255, 255, 255, 0.13);
+			border-color: rgba(231, 231, 231, 0.05);
+		}
+			.navbar-brand{
+				height: 100%;
+			    padding: 0 !important;
+			    @include breakpoint(extra-head){
+					margin-left: 0 !important;
+				}
+			}
+				.navbar-brand img{
+					width: 200px;
+					@include breakpoint(middle){
+						width: 165px;
+					}
+						@include breakpoint(extra-head){
+		    			    width: 150px;
+						}
+				}
+					.nav-header{
+						float: right;
+						@include breakpoint(extra-head){
+		    			    float: none;
+						}
+					}
+						.navbar-nav-top{
+							padding-top: 31px;
+							padding-right: 5px;
+							a{
+								text-transform: uppercase;
+								padding: 10px 5px;
+							}
+								@include breakpoint(middle){
+									padding-top: 18px;
+								}
+									@include breakpoint(extra-head){
+												padding-top:0;
+												margin: 0;
+												float: none;
+											}
+						}
+							.nav-top-soc{
+							    padding-top: 33px;
+									@include breakpoint(middle){
+										padding-top: 20px;
+									}
+										@include breakpoint(extra-head){
+											display: none;
+										}
+											.fa-stack{
+												width: 38px;
+											}
+							}
+	.btn-nav{
+		color: #fff;
+	    border: 1px solid #cccccc;
+	    border-color: rgba(0,0,0,0.1) rgba(0,0,0,0.1) rgba(0,0,0,0.25);
+	    border-bottom-color: #b3b3b3;
+        background-image: linear-gradient(to bottom, rgb(45, 158, 255), #337AB7);
+	    	@include breakpoint(extra-head ){
+	    		display: block;
+	      		width: 100%;
+			}
+	}
+		.btn-nav:hover{
+			background-image:linear-gradient(to bottom, #85BAE8, #4078A9);
+			color: #fff;
+		}
+
+}

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<title>Благотворительный фонд Святость материнства: помощь матерям и больным детям</title>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<link rel="shortcut icon" href="client/images/header/shortcut-logo.png">
+		<link rel="stylesheet" type="text/css" href="client/styles/css/index.css">
+		<link rel="stylesheet" type="text/css" href="client/styles/scss/lib/bootstrap/css/bootstrap.css">
+		<link rel="stylesheet" type="text/css" href='http://fonts.googleapis.com/css?family=Roboto:400,300,700&subset=latin,cyrillic'>
+		<link rel="stylesheet" type="text/css" href='http://fonts.googleapis.com/css?family=Didact+Gothic&subset=latin,cyrillic'>
+		<link rel="stylesheet" type="text/css" href="client/styles/scss/lib/font-awesome/css/font-awesome.min.css">
+		<script async src="client/js/bootstrap.min.js"></script>
+		<script async src="client/js/jquery-2.1.3.min.js"></script>
+	</head>
+	<body>
+		<header>
+			<nav class="navbar navbar-default">
+				<div class="container">
+					<!-- Brand and toggle get grouped for better mobile display -->
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						</button>
+						<div class="navbar-brand ">
+							<a href="#"><img src="client/images/header/logo.png" alt="logo"></a>
+						</div>
+					</div>
+					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+						<div class="nav pull-right">
+							<div class="nav navbar-nav navbar-nav-top">
+								<a class="btn btn-nav disabled" href="#">нужна помощь</a>
+								<a class="btn btn-nav disabled" href="#">вы помогли</a>
+								<a class="btn btn-nav disabled" href="#">проекты</a>
+								<a class="btn btn-nav disabled" href="#">хочу помочь</a>
+								<a class="btn btn-nav disabled" href="#">акции</a>
+								<a class="btn btn-nav disabled" href="#">О нас</a>
+								<a class="btn btn-nav disabled" href="#">Контакты</a>
+							</div>
+							<div class="nav navbar-nav navbar-nav-top-soc">
+								<a class="vk" href="http://vk.com/materinstvosvyato"></a>
+								<a class="ok" href="http://ok.ru/group52457660481726"></a>
+								<a class="fb" href="https://www.facebook.com/materinstvosvyato"></a>
+								<a class="of" href="#"></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</nav>
+		</header>
+		<main>
+		<div class="you-can-help">
+			<div class="container">
+				<div class="geo">
+					<p>По нижеуказанным адресам вы можете нам помочь</p>
+					<script src="http://maps.api.2gis.ru/2.0/loader.js"></script>
+					<div id="map" style="width: 100%; height: 500px;"></div>
+					<script>
+					DG.then(function() {
+					var map,
+					marker1,
+					marker2,
+					marker3,
+					group;
+					map = DG.map('map', {
+					center: [46.466005, 30.538559],
+					zoom: 13
+					});
+					marker1 = DG.marker([46.469228, 30.707313]).addTo(map);
+					marker2 = DG.marker([46.486842, 30.708777]).addTo(map);
+					marker3 = DG.marker([46.390894200705354, 30.72943836450577]).addTo(map);
+					 DG.marker([46.469228, 30.707313]).addTo(map).bindPopup('Я балун!');
+					group = DG.featureGroup([marker1, marker2, marker3]);
+					group.addTo(map);
+					group.on('click', function(e) {
+					map.setView([e.latlng.lat, e.latlng.lng]);
+					});
+					});
+					</script>
+				</div>
+			</div>
+		</div>
+		</main>
+		<footer>
+			<nav class="navbar-default navbar-bottom navbar-static-bottom">
+				<div class="container">
+					<div class="footer-nav fot-left">
+						<p>НАШИ КОНТАКТЫ</p>
+						<p><i class="fa-fw fa fa-phone"></i>+38 (048) 700-57-39 (приемная)</p>
+						<p><i class="fa-fw fa fa-phone"></i>+38 (067) 519-48-48 (пресс-служба)</p>
+						<p><i class="fa-fw fa fa-envelope-o"></i> materinstvo048@gmail.com</p>
+						<p><i class="fa-fw fa fa-map-marker"></i>65104, г. Одесса, ул. Троицкая, 49/51</p>
+					</div>
+					<div class="footer-nav fot-right">
+						<p>Присоеденяйтесь к нам в социальных сетях</p>
+						<div class="nav navbar-nav soc nav-bottom-soc">
+							<a href="http://vk.com/materinstvosvyato">
+								<span class="fa-stack fa-lg">
+									<i class="fa fa-circle fa-stack-2x"></i>
+									<i class="fa fa-vk fa-stack-1x fa-inverse"></i>
+								</span>
+							</a>
+							<a href="http://ok.ru/group52457660481726">
+								<span class="fa-stack fa-lg">
+									<i class="fa fa-circle fa-stack-2x"></i>
+									<i class="fa fa-odnoklassniki fa-stack-1x fa-inverse"></i>
+								</span>
+							</a>
+							<a href="https://www.facebook.com/materinstvosvyato">
+								<span class="fa-stack fa-lg">
+									<i class="fa fa-circle fa-stack-2x"></i>
+									<i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+								</span>
+							</a>
+						</div>
+						[!AjaxSearch? &ajaxSearch=`0` &landingPage=`75`  &showResults=`0`!]
+					</div>
+				</div>
+			</nav>
+		</footer>
+	</body>
+</html>
